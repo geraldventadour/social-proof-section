@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Set core body defaults */
+body {
+  font-family: "Spartan", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+h1,
+.rating__text,
+.quote-owner__name {
+  font-weight: 700;
+}
+
+.description,
+.quote {
+  font-weight: 500;
+}
+
+h1,
+.rating__text {
+  color: #502050;
+}
+
+.description {
+  color: #937b92;
+  font-size: 0.9375rem;
+  letter-spacing: -0.5px;
+  line-height: 1.6666666667;
+  margin-top: 1.125rem;
+}
+@media (min-width: 1220px) {
+  .description {
+    margin-top: 0.375rem;
+  }
+}
+
+.quote-owner__name,
+.quote {
+  color: white;
+}
+
+.quote-owner__status {
+  color: #ee68a4;
+  margin-top: 0.3125rem;
+}
+
+.texts {
+  text-align: center;
+}
+@media (min-width: 1220px) {
+  .texts {
+    text-align: unset;
+  }
+}
+
+h1 {
+  font-size: clamp(2rem, 8.533vw, 3rem);
+  line-height: 1;
+  letter-spacing: -1.14px;
+}
+@media (min-width: 600px) {
+  h1 {
+    letter-spacing: -1.71px;
+  }
+}
+
+.rating__text,
+blockquote {
+  font-size: 0.8125rem;
+}
+
+.quote {
+  letter-spacing: -0.23px;
+  line-height: 1.6923076923;
+  margin-top: 1.625rem;
+}
+
+main {
+  max-width: 1440px;
+  margin: auto;
+}
+
+.top {
+  overflow: hidden;
+  background: url("./images/bg-pattern-top-mobile.svg") no-repeat;
+}
+@media (min-width: 376px) {
+  .top {
+    background: url("./images/bg-pattern-top-desktop.svg") no-repeat;
+  }
+}
+
+main {
+  background-position: right bottom;
+  overflow: hidden;
+  background: url("./images/bg-pattern-bottom-mobile.svg") no-repeat;
+}
+@media (min-width: 376px) {
+  main {
+    background: url("./images/bg-pattern-bottom-desktop.svg") no-repeat;
+    background-position: right bottom;
+  }
+}
+
+.container {
+  width: min(87.2%, 1110px);
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.container--top {
+  gap: 2.5rem 10.8125rem;
+  margin-top: clamp(5rem, 21.333vw, 7.9375rem);
+}
+.container--bottom {
+  gap: 1rem 1.875rem;
+  margin-top: clamp(3.0625rem, 13.066vw, 4.5rem);
+  margin-bottom: clamp(6.1875rem, 13.066vw, 8.25rem);
+}
+
+.texts,
+.ratings {
+  flex: 0 1 445px;
+}
+
+.rating,
+blockquote {
+  border-radius: 0.5rem;
+}
+
+.ratings {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.ratings .rating {
+  background-color: #f7f2f7;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  padding: 1rem;
+  transition: transform 1s 0.5s;
+}
+.ratings .rating::before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 16px;
+  background: url("./images/icon-star.svg") space;
+}
+@media (min-width: 1220px) {
+  .ratings .rating:nth-of-type(1) {
+    transform: translateX(-3rem);
+  }
+  .ratings .rating:nth-of-type(3) {
+    transform: translateX(3rem);
+  }
+}
+
+blockquote {
+  background-color: #502050;
+  flex: 0 1 350px;
+  padding: 2rem;
+  transition: transform 1s 0.5s;
+}
+@media (min-width: 1220px) {
+  blockquote {
+    padding: 2.5rem 2rem;
+  }
+}
+@media (min-width: 1273px) and (min-height: 755px) {
+  blockquote:nth-of-type(2) {
+    transform: translateY(1.5rem);
+  }
+  blockquote:nth-of-type(3) {
+    transform: translateY(3rem);
+  }
+}
+
+.quote-owner {
+  display: flex;
+  gap: 1.4375rem;
+  align-items: center;
+}
+.quote-owner::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.quote-owner--colton::before {
+  background: url("./images/image-colton.jpg");
+  background-size: cover;
+}
+.quote-owner--irene::before {
+  background: url("./images/image-irene.jpg");
+  background-size: cover;
+}
+.quote-owner--anne::before {
+  background: url("./images/image-anne.jpg");
+  background-size: cover;
+}
+
+/*# sourceMappingURL=style.css.map */
